@@ -1,0 +1,126 @@
+:root {
+  --bg-color: #b3cde0;           /* Azul pastel claro */
+  --accent: #4078c0;             /* Azul medio */
+  --text: #1c1c1c;               /* Texto oscuro */
+  --box-bg: rgba(200, 220, 255, 0.6); /* Secciones translúcidas claras */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../assets/img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-color); /* fallback */
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Íconos sociales */
+.icons {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.icons img {
+  width: 24px;
+  margin-left: 12px;
+  filter: brightness(80%);
+  transition: filter .2s;
+}
+.icons img:hover {
+  filter: brightness(100%);
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Personaje */
+.sidebar {
+  flex: 0 0 30%;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.character {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenido */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid var(--accent);
+}
+.hero-text h1 {
+  font-size: 2.4rem;
+  color: var(--accent);
+}
+.hero-text p {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Secciones */
+main .content-box {
+  background-color: var(--box-bg);
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.content-box h2 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.content-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+.content-box ul li {
+  margin-bottom: 6px;
+}
+.content-box a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.content-box a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 30px;
+}
